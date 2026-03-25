@@ -36,6 +36,10 @@ body.no-scroll {
   overflow: hidden;
 }
 
+main {
+  flex-grow: 1;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;

@@ -26,7 +26,6 @@
 }
 
 .teachers-image {
-  display: block;
   margin: 0 auto 16px;
   border-radius: 50%;
 }
@@ -36,7 +35,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
-  color: #121417;
+  color: var(--color-black);
 }
 
 .teachers-description {
@@ -44,18 +43,13 @@
   margin: 0 auto;
   font-size: 14px;
   line-height: 1.71;
-  color: rgba(18, 20, 23, 0.5);
+  color: var(--color-black-transparent);
 }
 
 /* tablet */
-@media screen and (min-width: 768px) {
-  .teachers-section {
+@media only screen and (min-width: 768px) {
+  .teachers {
     padding: 100px 0;
-  }
-
-  .teachers-title {
-    font-size: 40px;
-    line-height: 1.2;
   }
 
   .teachers-text {
@@ -78,8 +72,8 @@
 }
 
 /* desktop */
-@media screen and (min-width: 1280px) {
-  .teachers-section {
+@media only screen and (min-width: 1280px) {
+  .teachers {
     padding: 150px 0;
   }
 

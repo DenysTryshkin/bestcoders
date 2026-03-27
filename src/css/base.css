@@ -130,7 +130,7 @@ main {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   background-color: var(--color-green);
   color: var(--color-white);
   transition: background-color var(--transition-base);

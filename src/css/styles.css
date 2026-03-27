@@ -11,6 +11,7 @@
 @import url('./animations.css');
 @import url('./socials.css');
 @import url('./logo.css');
+@import url('./common.css');
 
 /* Sections style */
 @import url('./header.css');

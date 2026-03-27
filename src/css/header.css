@@ -1,5 +1,24 @@
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
   padding: 20px 0;
+  margin-bottom: 8px;
+  background-color: var(--color-white);
+  z-index: 1000;
+  transition: box-shadow var(--transition-base);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 16px;
+  }
+}
+
+.header--scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .nav {

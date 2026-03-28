@@ -1,5 +1,4 @@
 .application-section {
-  margin-bottom: 80px;
 }
 
 .application-section__content {
@@ -23,10 +22,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .application-section {
-    margin-bottom: 100px;
-  }
-
   .application-text {
     margin-bottom: 64px;
     font-size: 18px;
@@ -35,10 +30,6 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .application-section {
-    margin-bottom: 150px;
-  }
-
   .application-section .container {
     max-width: 1152px;
   }
@@ -59,38 +50,21 @@
   width: 100%;
   height: auto;
   border-radius: 30px 30px 0 0;
-  clip-path: ellipse(0% 0% at 50% 0%);
-
-  animation: revealCurve linear forwards;
-  animation-timeline: view();
-  animation-range: entry 10% entry 120%;
-  /* animation-range: cover 10% cover 120%; */
-
-  will-change: clip-path;
-}
-
-/* @supports not (animation-timeline: view()) {
-  .application-stat__pic {
-    clip-path: ellipse(80% 100% at 50% 0%);
-  }
-} */
-
-@keyframes revealCurve {
-  to {
-    clip-path: ellipse(70% 100% at 50% 0%);
-  }
+  clip-path: ellipse(70% 100% at 50% 0%);
 }
 
 .application-stat__content {
   padding: 20px 20px 40px;
 }
 
-.application-stat__title {
+.application-stat__num {
+  display: block;
   margin: 0 0 8px;
   font-weight: 700;
   font-size: 40px;
   line-height: 1.2;
   letter-spacing: -0.02em;
+  color: var(--color-white);
 }
 
 .application-stat__descr {

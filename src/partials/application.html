@@ -1,5 +1,145 @@
-<section class="section application" id="application">
+<section class="application-section" id="application">
   <div class="container">
-    <h2>Leave an application</h2>
+    <h2 class="section-title">
+      Leave an <span class="section-title-part">application</span>
+    </h2>
+
+    <p class="application-text">
+      Please use the form below to contact us. Enter your name, email, and
+      message and we'll get back to you shortly.
+    </p>
+
+    <div class="application-section__content">
+      <div class="application-stat">
+        <img
+          class="application-stat__pic"
+          src="./img/application/4.jpg"
+          srcset="./img/application/4.jpg 1x, ./img/application/4@2x.jpg 2x"
+          alt="girl recording with laptop"
+          width="492"
+          height="392"
+        />
+        <div class="application-stat__content">
+          <h3 class="application-stat__title">1000</h3>
+          <p class="application-stat__descr">
+            of our online English language lessons! This journey has been full
+            of discovery, growth and unforgettable moments, and we are happy to
+            share this joyful event with you.
+          </p>
+        </div>
+      </div>
+
+      <form class="application-form">
+        <div class="form-group">
+          <input
+            class="form-input"
+            id="name"
+            name="name"
+            type="text"
+            placeholder=" "
+            required
+            pattern="^[a-zA-Zа-яА-ЯіІїЇєЄґҐ\s']+$"
+            title="Name should only contain letters, spaces and apostrophes"
+          />
+          <label class="label" for="name">Name</label>
+        </div>
+
+        <div class="form-group">
+          <input
+            class="form-input"
+            id="email"
+            name="email"
+            type="email"
+            placeholder=" "
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address (e.g., example@domain.com)"
+          />
+          <label class="label" for="email">Email</label>
+        </div>
+
+        <div class="form-group">
+          <input
+            class="form-input"
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder=" "
+            required
+            pattern="^\+?\d{1,4}?[ .\-\(\)]?\d{1,3}?[ .\-\(\)]?\d{1,4}[ .\-\(\)]?\d{1,4}[ .\-\(\)]?\d{1,9}$"
+            title="Phone number must be 10-14 digits and can include +, spaces, dashes and brackets"
+          />
+          <label class="label" for="phone">Phone</label>
+        </div>
+
+        <div class="form-group">
+          <textarea
+            class="form-textarea"
+            id="comment"
+            name="comment"
+            rows="4"
+            placeholder=" "
+          ></textarea>
+          <label class="label" for="comment">Comment</label>
+        </div>
+
+        <fieldset class="radio-group">
+          <legend class="radio-group__title">Choose a teacher</legend>
+
+          <label class="radio">
+            <input
+              class="radio__input"
+              type="radio"
+              name="teacher"
+              value="maria"
+              checked
+            />
+            <span class="radio__custom-radio"></span>
+            Maria
+          </label>
+
+          <label class="radio">
+            <input
+              class="radio__input"
+              type="radio"
+              name="teacher"
+              value="artem"
+            />
+            <span class="radio__custom-radio"></span>
+            Artem
+          </label>
+
+          <label class="radio">
+            <input
+              class="radio__input"
+              type="radio"
+              name="teacher"
+              value="ilona"
+            />
+            <span class="radio__custom-radio"></span>
+            Ilona
+          </label>
+
+          <label class="radio">
+            <input
+              class="radio__input"
+              type="radio"
+              name="teacher"
+              value="volodymyr"
+            />
+            <span class="radio__custom-radio"></span>
+            Volodymyr
+          </label>
+        </fieldset>
+
+        <button class="primary-button w-100" type="submit">Send</button>
+
+        <p class="form-privacy">
+          By clicking on “Send” button, you agree to our
+          <a href="#">Privacy Policy</a>, <br />and allow Promodo to use this
+          information for marketing purposes.
+        </p>
+      </form>
+    </div>
   </div>
 </section>

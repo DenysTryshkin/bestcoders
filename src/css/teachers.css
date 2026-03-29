@@ -1,5 +1,4 @@
 .teachers-content {
-  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -24,6 +23,8 @@
 
 .teachers-item {
   text-align: center;
+  max-width: 335px;
+  margin: 0 auto;
 }
 
 .teachers-image {
@@ -40,8 +41,6 @@
 }
 
 .teachers-description {
-  max-width: 272px;
-  margin: 0 auto;
   font-size: 14px;
   line-height: 1.71;
   color: var(--color-black-transparent);
@@ -49,6 +48,10 @@
 
 /* tablet */
 @media only screen and (min-width: 768px) {
+  .teachers-content {
+    max-width: 576px;
+  }
+
   .teachers-text {
     margin-bottom: 64px;
     font-size: 18px;
@@ -70,6 +73,10 @@
 
 /* desktop */
 @media only screen and (min-width: 1280px) {
+  .teachers-content {
+    max-width: 1024px;
+  }
+
   .teachers-list {
     flex-wrap: nowrap;
     gap: 32px;

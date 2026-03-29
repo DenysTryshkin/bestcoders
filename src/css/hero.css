@@ -94,35 +94,39 @@ html {
 
 .hero-scroll {
   position: absolute;
-  bottom: 32px;
   right: 32px;
+  bottom: 32px;
 
   width: 48px;
   height: 48px;
-
-  border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.hero-scroll img {
-  width: 48px;
-  height: 48px;
+.hero-scroll-icon {
+  width: 14px;
+  height: 14px;
+  fill: #4dc274;
+
+  transition: fill 250ms ease;
 }
 
-.icon-hover {
-  display: none;
+.hero-scroll:hover {
+  background-color: #4dc274;
 }
 
-.hero-scroll:hover .icon-default {
-  display: none;
+.hero-scroll:hover .hero-scroll-icon {
+  fill: #ffffff;
 }
 
-.hero-scroll:hover .icon-hover {
-  display: block;
-}
+
 
 @media screen and (max-width: 820px) {
   .hero-card {

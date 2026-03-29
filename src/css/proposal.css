@@ -134,7 +134,7 @@
     display: block;
     width: 214px;
     height: 263px;
-    background-image: url('../img/proposals/books.png');
+    background-image: url('../img/proposals/books.webp');
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -142,7 +142,7 @@
 
 @media (min-resolution: 2x) and (min-width: 768px) {
   .proposal-card::after {
-    background-image: url('../img/proposals/books@2x.png');
+    background-image: url('../img/proposals/books@2x.webp');
   }
 }
 

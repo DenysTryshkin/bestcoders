@@ -1,3 +1,8 @@
+.teachers-content {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 .teachers .section-title {
   margin-bottom: 16px;
 }

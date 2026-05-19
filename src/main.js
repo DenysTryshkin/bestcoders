@@ -3,31 +3,49 @@ const refs = {
   closeMenuBtn: document.querySelector('[data-menu-close]'),
   backdrop: document.querySelector('[data-backdrop]'),
   body: document.body,
- header: document.querySelector('.header')
+  header: document.querySelector('.header'),
 };
 
-function toggleMenu() {
-  refs.backdrop.classList.toggle('is-open');
-  refs.body.classList.toggle('no-scroll');
+const isMenuReady =
+  refs.openMenuBtn && refs.closeMenuBtn && refs.backdrop && refs.body;
+
+function isMenuOpen() {
+  return refs.backdrop.classList.contains('is-open');
 }
 
-refs.openMenuBtn.addEventListener('click', toggleMenu);
-refs.closeMenuBtn.addEventListener('click', toggleMenu);
+function setMenuState(isOpen) {
+  refs.backdrop.classList.toggle('is-open', isOpen);
+  refs.body.classList.toggle('no-scroll', isOpen);
 
-refs.backdrop.addEventListener('click', e => {
-  if (e.target === refs.backdrop) {
-    toggleMenu();
-  }
+  refs.openMenuBtn.setAttribute('aria-expanded', String(isOpen));
+}
 
-  if (e.target.classList.contains('mobile-nav__link')) {
-    toggleMenu();
-  }
-});
+function toggleMenu() {
+  setMenuState(!isMenuOpen());
+}
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 20) {
-    refs.header.classList.add('header--scrolled');
-  } else {
-    refs.header.classList.remove('header--scrolled');
-  }
-});
+if (isMenuReady) {
+  refs.openMenuBtn.addEventListener('click', toggleMenu);
+  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+
+  refs.backdrop.addEventListener('click', event => {
+    const isBackdropClick = event.target === refs.backdrop;
+    const isMobileNavLink = event.target.classList.contains('mobile-nav__link');
+
+    if (isBackdropClick || isMobileNavLink) {
+      setMenuState(false);
+    }
+  });
+
+  window.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && isMenuOpen()) {
+      setMenuState(false);
+    }
+  });
+}
+
+if (refs.header) {
+  window.addEventListener('scroll', () => {
+    refs.header.classList.toggle('header--scrolled', window.scrollY > 20);
+  });
+}

@@ -1,0 +1,9 @@
+# 1. Дозволити всім пошуковим роботам (Google, Bing, DuckDuckGo)
+User-agent: *
+
+# 2. Дозволити доступ до всього сайту
+Allow: /
+
+# 3. Заборонити індексацію службових файлів
+Disallow: /dist/
+Disallow: /node_modules/
